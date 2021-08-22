@@ -1,0 +1,16 @@
+{
+	"RTT_Studio.Build.Parallel_Jobs": "8",
+	"RTT_Studio.Env_Location": "D:/RT-ThreadStudio/platform/env_released/env",
+	"RTT_Studio.Debuger.J-Link.Location": "D:/RT-ThreadStudio/repo/Extract/Debugger_Support_Packages/SEGGER/J-Link/6.80d",
+	"RTT_Studio.Debuger.ST-Link.Location": "D:/RT-ThreadStudio/repo/Extract/Debugger_Support_Packages/STMicroelectronics/ST-LINK_Debugger/1.6.0",
+	"RTT_Studio.Debuger.QEMU.Location": "D:/RT-ThreadStudio/repo/Extract/Debugger_Support_Packages/RealThread/QEMU/4.2.0.4",
+	"files.associations": {
+		"rtthread.h": "c",
+		"rtconfig.h": "c",
+		"24cxx.h": "c",
+		"myiic.h": "c",
+		"lvgl_rt_thread.h": "c",
+		"lvgl.h": "c",
+		"stdio.h": "c"
+	}
+}

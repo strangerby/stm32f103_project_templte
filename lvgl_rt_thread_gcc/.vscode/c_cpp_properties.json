@@ -1,0 +1,43 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/2020-q2-update/arm-none-eabi/include",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/2020-q2-update/arm-none-eabi/include/c++/9.3.1",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/2020-q2-update/arm-none-eabi/include/c++/9.3.1/backward",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include-fixed",
+                "Libraries/CMSIS/Include",
+                "Libraries/CMSIS/Device/ST/STM32F1xx/Include",
+                "Libraries/STM32F1xx_HAL_Driver/Inc",
+                "Libraries/STM32F1xx_HAL_Driver/Inc/Legacy",
+                "Libraries/STM32F1xx_HAL_Driver/Src",
+                "Applications/include",
+                "Drivers/include",
+                "RT-Thread/include",
+                "RT-Thread/bsp",
+		"Drivers/TOUCH",
+		"Drivers/LCD",
+		"Drivers/24CXX",
+		"Drivers/IIC",
+		"Drivers/GUI/lvgl_7_11_0",
+		"Drivers/GUI/lvgl_7_11_0/src"
+
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER",
+                "STM32F103xE"
+            ],
+
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

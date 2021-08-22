@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start",
+            "type": "shell",
+            "command": "make -j6; openocd  -f interface/stlink.cfg -f target/stm32f1x.cfg",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": ""
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^",
+                    "endsPattern": "Nothing to be done for|arm-none-eabi-objcopy"
+                }
+            }
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build & Update",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "C:/Program Files (x86)/GNU Tools Arm Embedded/OpenOCD-20200503-0.10.0/share/openocd/scripts/interface/stlink-v2.cfg",
+                "-f",
+                "C:/Program Files (x86)/GNU Tools Arm Embedded/OpenOCD-20200503-0.10.0/share/openocd/scripts/target/stm32f1x.cfg",
+                "-c",
+                "program bulid/${workspaceRootFolderName}.elf verify reset exit"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "dependsOn": "Build"
+        },
+        {
+            "label": "stop",
+            "command": "echo ${input:terminate}",
+            "type": "shell"
+        }
+    ],
+    "inputs": [
+        {
+          "id": "terminate",
+          "type": "command",
+          "command": "workbench.action.tasks.terminate",
+          "args": "terminateAll"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd" : "${workspaceRoot}",
+            "executable": "build/${workspaceRootFolderName}.elf",
+            "name": "Debug Microcontroller",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "C:/Program Files (x86)/GNU Tools Arm Embedded/OpenOCD-20200503-0.10.0/share/openocd/scripts/interface/stlink-v2.cfg",
+                "C:/Program Files (x86)/GNU Tools Arm Embedded/OpenOCD-20200503-0.10.0/share/openocd/scripts/target/stm32f1x.cfg"
+            ]
+        }        
+
+    ]
+}
